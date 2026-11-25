@@ -1,0 +1,26 @@
+CREATE DATABASE AnimalKingdom;
+USE AnimalKingdom;
+
+CREATE TABLE Animals (
+    ID INT PRIMARY KEY,
+    Назва_звіра VARCHAR(100) NOT NULL,
+    Тип_звіра VARCHAR(50) NOT NULL
+);
+
+INSERT INTO Animals (ID, Назва_звіра, Тип_звіра) VALUES
+(1, 'Лев', 'Ссавець'),
+(2, 'Крокодил', 'Плазун'),
+(3, 'Орел', 'Птах'),
+(4, 'Морська черепаха', 'Плазун'),
+(5, 'Мавпа', 'Ссавець');
+
+UPDATE Animals
+SET Назва_звіра = 'Сокіл'
+WHERE Назва_звіра = 'Орел';
+
+SELECT ID, Назва_звіра, Тип_звіра
+FROM Animals
+WHERE Тип_звіра = 'Ссавець';
+
+SELECT *
+FROM Animals;
